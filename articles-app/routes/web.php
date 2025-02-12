@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('create-article');
+});
+
+Route::get('/articles', function () {
+    return view('articles');
+});
+
+Route::get('/articles/{id}', function () {
+    return view('article-details');
+});
+
+Route::get('/articles/{id}/edit', function () {
+    return view('update-article');
 });
